@@ -1,6 +1,5 @@
 class Solution {
   String convert(String s, int numRows) {
-    String result = "";
     List<String> rows = List<String>.generate(numRows, (str) => "");
     bool forward = true;
     int index = 0;
@@ -25,11 +24,7 @@ class Solution {
       }
     }
 
-    for (final str in rows) {
-      result += str;
-    }
-
-    return result;
+    return rows.join();
   }
 }
 
